@@ -24,7 +24,7 @@ MASTER_CONNECTION_STRING = (
 
 # Rutas
 BASE_DIR        = os.path.dirname(os.path.abspath(__file__))
-RAW_RENAES      = os.path.join(BASE_DIR, "data", "raw", "renaes")
+RAW_RENIPRESS   = os.path.join(BASE_DIR, "data", "raw", "renipress")
 RAW_REUNIS      = os.path.join(BASE_DIR, "data", "raw", "reunis")
 RAW_DATOS_AB    = os.path.join(BASE_DIR, "data", "raw", "datos_abiertos")
 PROCESSED_DIR   = os.path.join(BASE_DIR, "data", "processed")
