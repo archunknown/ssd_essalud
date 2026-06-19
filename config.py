@@ -13,6 +13,15 @@ CONNECTION_STRING = (
     "&Encrypt=no"
 )
 
+# Cadena de conexion a master, usada unicamente para crear la base de datos
+# (no se puede crear una DB estando conectado a ella misma)
+MASTER_CONNECTION_STRING = (
+    f"mssql+pyodbc://{DB_SERVER}/master"
+    f"?driver={DB_DRIVER.replace(' ', '+')}"
+    "&trusted_connection=yes"
+    "&Encrypt=no"
+)
+
 # Rutas
 BASE_DIR        = os.path.dirname(os.path.abspath(__file__))
 RAW_RENAES      = os.path.join(BASE_DIR, "data", "raw", "renaes")
@@ -29,5 +38,5 @@ UMBRAL_ALTO     = 110.0
 # Filtro institucional (PRD RN-09)
 INSTITUCION_ESSALUD = "ESSALUD"
 
-# Horizonte de predicción (PRD RN-04)
+# Horizonte de prediccion (PRD RN-04)
 HORIZONTE_MESES = 6
