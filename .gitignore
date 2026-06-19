@@ -1,0 +1,24 @@
+# Entornos virtuales
+venv/
+__pycache__/
+*.pyc
+
+# Datos (no se versionan datasets crudos ni procesados)
+data/raw/*
+data/processed/*
+data/outputs/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/outputs/.gitkeep
+
+# Power BI
+*.pbix.bak
+
+# Credenciales / config sensible
+.env
+
+# VS Code
+.vscode/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
