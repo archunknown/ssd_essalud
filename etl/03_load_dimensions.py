@@ -74,7 +74,7 @@ def load_geografia(eng):
 
 
 def load_tiempo(eng):
-    df = pd.read_csv(F_TIEMPO, sep=";", encoding="utf-8-sig")
+    df = pd.read_csv(F_TIEMPO, sep=";", encoding="utf-8-sig", parse_dates=["fecha_inicio"])
     df = df[["periodo", "anio", "mes", "nombre_mes", "trimestre", "semestre", "fecha_inicio"]]
     df.to_sql("dim_tiempo", eng, schema="dw", if_exists="append",
               index=False, chunksize=1000)
